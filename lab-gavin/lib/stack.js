@@ -2,14 +2,14 @@
 
 const Node = require('./node');
 
-module.exports = class {
+module.exports = class Stack {
   constructor() {
     this.top = null;
     // this.maxSize = maxSize || null
     // this.size = 0
   }
 
-  push(val) {
+  myPush(val) {
     let node = new Node(val);
 
     if(!this.top) {
@@ -22,14 +22,32 @@ module.exports = class {
     return this.top;
   }
 
-  pop() {
-    if(this.top) {
-      this.top.next = this.top;
+  myPop() {
+    if(!this.head){
+      return;
     }
+    let result = this.head;
+    if(!result.next){
+      this.head = null;
+      return result;
+    }
+
+    let tail = this.head;
+    result = result.next;
+
+    while(result.next){
+      tail = tail.next;
+      result = result.next;
+    }
+
+    tail.next = null;
+    return result.value;
 
   }
 
-  peek() {
-
+  myPeek(node) {
+    if(!node.next){
+      return node.val;
+    }
   }
 };
