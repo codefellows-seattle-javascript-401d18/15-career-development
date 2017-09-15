@@ -13,7 +13,7 @@ describe('Testing queue methods', () => {
         testQ.enqueue(1);
         testQ.enqueue(2);
         testQ.enqueue(3);
-        expect(testQ[1]).toEqual(2);
+        expect(testQ).toEqual(2);
       });
     });
     describe('#DEQUEUE', () => {
@@ -23,7 +23,7 @@ describe('Testing queue methods', () => {
         testQ.enqueue(2);
         testQ.enqueue(3);
         testQ.dequeue();
-        expect(testQ[1]).toEqual({name: 'Thomas'});
+        expect(testQ).toEqual({name: 'Thomas'});
       });
     });
   });
