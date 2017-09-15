@@ -2,14 +2,14 @@
 
 const Node = require('./node');
 
-module.exports = class Stack {
+module.exports = class {
   constructor() {
     this.top = null;
     // this.maxSize = maxSize || null
     // this.size = 0
   }
 
-  myPush(val) {
+  push(val) {
     let node = new Node(val);
 
     if(!this.top) {
@@ -22,7 +22,7 @@ module.exports = class Stack {
     return this.top;
   }
 
-  myPop() {
+  pop() {
     if(!this.head){
       return;
     }
