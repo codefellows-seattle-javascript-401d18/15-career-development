@@ -1,5 +1,5 @@
 {
-  "name": "01-cf-gram",
+  "name": "lab15gavin",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -9,9 +9,6 @@
   "jest": {
     "verbose": true,
     "testEnvironment": "node",
-    "setupFiles": [
-      "./__test__/lib/jest-setup.js"
-    ],
     "collectCoverage": true,
     "coverageDirectory": "./coverage",
     "coverageThreshold": {

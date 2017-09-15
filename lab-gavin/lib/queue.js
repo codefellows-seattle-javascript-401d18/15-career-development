@@ -2,7 +2,7 @@
 
 const Node = require('./node');
 
-module.exports = class {
+module.exports = class Queue{
   constructor() {
     this.front = null;
     // this.back = null // used for a double-ended queue
