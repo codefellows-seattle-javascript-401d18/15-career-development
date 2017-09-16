@@ -9,7 +9,7 @@ module.exports = class {
     // this.size = 0
   }
 
-  push(val) {
+  myPush(val) {
     let node = new Node(val);
 
     if(!this.top) {
@@ -22,10 +22,8 @@ module.exports = class {
     return this.top;
   }
 
-  pop() {
-    if(!this.head){
-      return;
-    }
+  myPop() {
+
     let result = this.head;
     if(!result.next){
       this.head = null;
