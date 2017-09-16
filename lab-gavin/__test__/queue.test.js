@@ -11,9 +11,7 @@ describe('Testing queue methods', () => {
       test('should add new node to queue stack in the back', () => {
         let testQ = new Queue;
         testQ.enqueue(1);
-        testQ.enqueue(2);
-        testQ.enqueue(3);
-        expect(testQ).toEqual(2);
+        expect(testQ).toEqual(1);
       });
     });
     describe('#DEQUEUE', () => {
@@ -21,9 +19,8 @@ describe('Testing queue methods', () => {
         let testQ = new Queue;
         testQ.enqueue(1);
         testQ.enqueue(2);
-        testQ.enqueue(3);
         testQ.dequeue();
-        expect(testQ).toEqual({name: 'Thomas'});
+        expect(testQ).toEqual(2);
       });
     });
   });
