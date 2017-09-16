@@ -14,7 +14,7 @@ describe('Testing stack methods', () => {
         testStack.myPush('Gavin');
         testStack.myPush('Eugene');
         testStack.myPush('Thomas');
-        expect(testStack[2]).toEqual('Eugene');
+        expect(testStack).toEqual('Eugene');
       });
     });
     describe('#POP', () => {
@@ -23,8 +23,8 @@ describe('Testing stack methods', () => {
         testStack.myPush('Gavin');
         testStack.myPush('Eugene');
         testStack.myPush('Thomas');
-        testStack.myPop();
-        expect(testStack).toEqual('Thomas');
+        let result = testStack.myPop();
+        expect(result).toEqual('Thomas');
       });
     });
     describe('#PEAK', () => {

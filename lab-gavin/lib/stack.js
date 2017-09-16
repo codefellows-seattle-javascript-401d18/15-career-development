@@ -23,7 +23,9 @@ module.exports = class {
   }
 
   myPop() {
-
+    if(!this.head){
+      return;
+    }
     let result = this.head;
     if(!result.next){
       this.head = null;
