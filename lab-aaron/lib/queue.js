@@ -8,6 +8,7 @@ module.exports = class {
     this.front = null;
   }
 
+  // 0(1)
   enqueue(val) {
     let node = new Node(val);
     let backNode;
@@ -15,7 +16,7 @@ module.exports = class {
     if(!this.front) {
       this.front = node;
       return this.front;
-    };
+    }
 
     _findBack(this.front);
     backNode.next = node;
@@ -25,15 +26,15 @@ module.exports = class {
       if(!node) return;
       backNode = node;
       _findBack(node.next);
-    };
-  };
+    }
+  }
 
-
+  //0(1)
   dequeue() {
     if(!this.front) return null;
     let temp = this.front;
-    this.front = this.front.next
+    this.front = this.front.next;
     temp.next = null;
     return temp;
   }
-}
+};
