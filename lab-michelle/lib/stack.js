@@ -1,9 +1,11 @@
 'use strict';
 const Node = require('./node');
 
-module.exports = class Stack {
+module.exports = class {
   constructor () {
-    this.top = null;
+    let node = new Node;
+    this.top = node;
+    this.maxSize = 10;
     //note: could also have this.maxSize = max.Size || null
     //Also could have: this.size = 0;
   }
@@ -35,10 +37,6 @@ module.exports = class Stack {
   ourPeek(val) {
     if (!this.top) return null;
     return this.top;
-  }
-
-  balancedBrackets() {
-
   }
   //reverse polish notation using your stack = bonus point;
 };

@@ -1,9 +1,7 @@
 'use strict';
-const Stack = ('../lib/stack');
-const superagent = require('superagent');
-require('jest');
+const Stack = ('../lib/stack.js');
 
-describe('Testing stack methods', function () {
+describe('Testing stack methods', function() {
   describe('Testing push', () => {
     test('should return 1', () => {
       let stackOne = new Stack;
