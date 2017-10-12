@@ -5,11 +5,8 @@ const Node = require('./node');
 module.exports = class {
   constructor() {
     this.top = null;
-    // this.maxSize = maxSize || null
-    // this.size = 0
   }
-
-  myPush(val) {
+  sqpush(val) {
     let node = new Node(val);
 
     if(!this.top) {
@@ -22,7 +19,7 @@ module.exports = class {
     return this.top;
   }
 
-  myPop() {
+  sqpop() {
     if(!this.head){
       return;
     }
@@ -45,10 +42,9 @@ module.exports = class {
 
   }
 
-  myPeek(node) {
+  sqpeek(node) {
     if(!node.next){
       return node.val;
     }
   }
 };
-
