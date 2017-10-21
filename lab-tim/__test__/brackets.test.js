@@ -1,6 +1,6 @@
 'use-strict';
 
-const brackets = require('../lib/bracket');
+const brackets = require('../lib/brackets');
 
 describe('Testing bracket methods', () => {
   describe('#brackets function', () => {
