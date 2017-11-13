@@ -5,7 +5,7 @@ const Node = require('./node')
 module.exports = class {
   constructor() {
     this.front = null;
-    this.back = null;
+    // this.back = null;
   }
 
   // Big-O runtime of O(1)
