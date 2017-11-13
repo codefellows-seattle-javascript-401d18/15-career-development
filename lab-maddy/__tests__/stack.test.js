@@ -3,8 +3,8 @@
 const Stack = require('../lib/stack');
 
 describe('Testing stack methods', () => {
-  describe('stack methods', () => {
-    describe('push', ()=> {
+  describe('#stack methods', () => {
+    describe('#PUSH', ()=> {
       test('should add new node to stack', () => {
         let testStack = new Stack;
         testStack.push(10);
@@ -14,7 +14,7 @@ describe('Testing stack methods', () => {
         expect(result).toEqual(30)
       });
     });
-    describe('pop', () => {
+    describe('#POP', () => {
       test('should remove node from stack', () => {
         let testStack = new Stack;
         testStack.push(1);
@@ -24,7 +24,7 @@ describe('Testing stack methods', () => {
         expect(result).toEqual(3);
       });
     });
-    describe('peek', () => {
+    describe('#PEEK', () => {
       test('should return value of node on top of stack', () => {
         let testStack = new Stack;
         testStack.push(1);

@@ -7,7 +7,7 @@ module.exports = class {
     this.top = null;
   }
 
-//Big-O runtime of O(1)
+  //Big-O runtime of O(1)
   push(val) {
     let node = new Node(val);
 
@@ -21,7 +21,7 @@ module.exports = class {
     return this.top
   }
 
-//Big-O runtime of O(1)
+  //Big-O runtime of O(1)
   pop() {
     if(!this.top) return null;
     let temp = this.top.val;
