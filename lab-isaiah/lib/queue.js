@@ -6,7 +6,7 @@ module.exports = class {
   constructor() {
     this.first = null;
   }
-
+  // O(n)
   enqueue(val) {
     let node = new Node(val);
     let lastNode;
@@ -20,13 +20,14 @@ module.exports = class {
     lastNode.next = node;
     return node;
 
+    // O(n)
     function _findBack(node) {
       if(!node) return;
       lastNode = node;
       _findBack(node.next);
     }
   }
-
+  // O(n)
   dequeue() {
     if(!this.first) return null;
     let temp = this.first;

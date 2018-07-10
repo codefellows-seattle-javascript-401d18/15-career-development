@@ -5,7 +5,7 @@ module.exports = {
     var parens = '[]{}()',
       stack = [],
       i, position;
-
+      // O(n)
     for(i = 0; i < string.length; i++) {
       position = parens.indexOf(i);
       if(position === -1) {

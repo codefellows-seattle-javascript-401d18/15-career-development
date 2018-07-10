@@ -6,6 +6,7 @@ module.exports = class {
   constructor() {
     this.top = null;
   }
+  // O()
   sqpush(val) {
     let node = new Node(val);
 
@@ -18,7 +19,7 @@ module.exports = class {
     this.top = node;
     return this.top;
   }
-
+  // O(n)
   sqpop() {
     if(!this.head){
       return;
@@ -41,7 +42,7 @@ module.exports = class {
     return result.value;
 
   }
-
+  // O(1)
   sqpeek(node) {
     if(!node.next){
       return node.val;
